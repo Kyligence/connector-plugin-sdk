@@ -1,0 +1,979 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20193.19.0821.2225                               -->
+<datasource formatted-name='federated.1p1v0el0sjd5kf1cw4ghd1wbzw6j' inline='true' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <connection class='federated'>
+    <named-connections>
+      <named-connection caption='10.1.2.43' name='leaf'>
+        <!--connection class='genericodbc' dbname='' odbc-connect-string-extras='' odbc-dbms-name='MySQL' odbc-driver='KyligenceODBCDriver' odbc-dsn='test_hive_3x' odbc-suppress-connection-pooling='' odbc-use-connection-pooling='' port='7070' schema='TDVT' server='10.1.2.43' username='ADMIN' password='KYLIN'>
+        </connection-->
+        <connection class='kyligence_odbc' dbname='TDVT' one-time-sql='' port='7090' server='10.1.2.43' sslmode='' username='ADMIN' password='KYLIN' tdvtconnection='mydb_connection' />
+      </named-connection>
+    </named-connections>
+    <relation connection='leaf' name='STAPLES' table='[TDVT].[STAPLES]' type='table' />
+    <cols>
+      <map key='[Call Center Region]' value='[STAPLES].[CALL_CENTER_REGION]' />
+      <map key='[Customer Balance]' value='[STAPLES].[CUSTOMER_BALANCE]' />
+      <map key='[Customer Name]' value='[STAPLES].[CUSTOMER_NAME]' />
+      <map key='[Customer Segment]' value='[STAPLES].[CUSTOMER_SEGMENT]' />
+      <map key='[Customer State]' value='[STAPLES].[CUSTOMER_STATE]' />
+      <map key='[Discount]' value='[STAPLES].[DISCOUNT]' />
+      <map key='[Employee Dept]' value='[STAPLES].[EMPLOYEE_DEPT]' />
+      <map key='[Employee Name]' value='[STAPLES].[EMPLOYEE_NAME]' />
+      <map key='[Employee Salary]' value='[STAPLES].[EMPLOYEE_SALARY]' />
+      <map key='[Employee Yrs Exp]' value='[STAPLES].[EMPLOYEE_YRS_EXP]' />
+      <map key='[Fill Time]' value='[STAPLES].[FILL_TIME]' />
+      <map key='[Gross Profit]' value='[STAPLES].[GROSS_PROFIT]' />
+      <map key='[Item Count]' value='[STAPLES].[ITEM_COUNT]' />
+      <map key='[Manager Name]' value='[STAPLES].[MANAGER_NAME]' />
+      <map key='[Market Segment]' value='[STAPLES].[MARKET_SEGMENT]' />
+      <map key='[Order Date]' value='[STAPLES].[ORDER_DATE]' />
+      <map key='[Order Day]' value='[STAPLES].[ORDER_DAY]' />
+      <map key='[Order ID]' value='[STAPLES].[ORDER_ID]' />
+      <map key='[Order Month]' value='[STAPLES].[ORDER_MONTH]' />
+      <map key='[Order Priority]' value='[STAPLES].[ORDER_PRIORITY]' />
+      <map key='[Order Quantity]' value='[STAPLES].[ORDER_QUANTITY]' />
+      <map key='[Order Quarter]' value='[STAPLES].[ORDER_QUARTER]' />
+      <map key='[Order Status]' value='[STAPLES].[ORDER_STATUS]' />
+      <map key='[Order Year]' value='[STAPLES].[ORDER_YEAR]' />
+      <map key='[PID]' value='[STAPLES].[PID]' />
+      <map key='[Price]' value='[STAPLES].[PRICE]' />
+      <map key='[Prod Type1]' value='[STAPLES].[PROD_TYPE1]' />
+      <map key='[Prod Type2]' value='[STAPLES].[PROD_TYPE2]' />
+      <map key='[Prod Type3]' value='[STAPLES].[PROD_TYPE3]' />
+      <map key='[Prod Type4]' value='[STAPLES].[PROD_TYPE4]' />
+      <map key='[Product Base Margin]' value='[STAPLES].[PRODUCT_BASE_MARGIN]' />
+      <map key='[Product Container]' value='[STAPLES].[PRODUCT_CONTAINER]' />
+      <map key='[Product ID]' value='[STAPLES].[PRODUCT_ID]' />
+      <map key='[Product In Stock]' value='[STAPLES].[PRODUCT_IN_STOCK]' />
+      <map key='[Product Name]' value='[STAPLES].[PRODUCT_NAME]' />
+      <map key='[Receive Time]' value='[STAPLES].[RECEIVE_TIME]' />
+      <map key='[Received Date]' value='[STAPLES].[RECEIVED_DATE]' />
+      <map key='[Sales Total]' value='[STAPLES].[SALES_TOTAL]' />
+      <map key='[Ship Charge]' value='[STAPLES].[SHIP_CHARGE]' />
+      <map key='[Ship Date]' value='[STAPLES].[SHIP_DATE]' />
+      <map key='[Ship Handle Cost]' value='[STAPLES].[SHIP_HANDLE_COST]' />
+      <map key='[Ship Mode]' value='[STAPLES].[SHIP_MODE]' />
+      <map key='[Ship Priority]' value='[STAPLES].[SHIP_PRIORITY]' />
+      <map key='[Ship Promo]' value='[STAPLES].[SHIP_PROMO]' />
+      <map key='[Supplier Balance]' value='[STAPLES].[SUPPLIER_BALANCE]' />
+      <map key='[Supplier Name]' value='[STAPLES].[SUPPLIER_NAME]' />
+      <map key='[Supplier Region]' value='[STAPLES].[SUPPLIER_REGION]' />
+      <map key='[Supplier State]' value='[STAPLES].[SUPPLIER_STATE]' />
+      <map key='[Tax Rate]' value='[STAPLES].[TAX_RATE]' />
+      <map key='[Total Cycle Time]' value='[STAPLES].[TOTAL_CYCLE_TIME]' />
+    </cols>
+    <metadata-records>
+      <metadata-record class='column'>
+        <remote-name>ITEM_COUNT</remote-name>
+        <remote-type>3</remote-type>
+        <local-name>[ITEM_COUNT]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>ITEM_COUNT</remote-alias>
+        <ordinal>1</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>10</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_LONG&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>SHIP_PRIORITY</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[SHIP_PRIORITY]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>SHIP_PRIORITY</remote-alias>
+        <ordinal>2</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>14</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='0' name='binary' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>ORDER_PRIORITY</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[ORDER_PRIORITY]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>ORDER_PRIORITY</remote-alias>
+        <ordinal>3</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>15</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='0' name='binary' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>ORDER_STATUS</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[ORDER_STATUS]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>ORDER_STATUS</remote-alias>
+        <ordinal>4</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>13</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='0' name='binary' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>ORDER_QUANTITY</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[ORDER_QUANTITY]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>ORDER_QUANTITY</remote-alias>
+        <ordinal>5</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>SALES_TOTAL</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[SALES_TOTAL]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>SALES_TOTAL</remote-alias>
+        <ordinal>6</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>DISCOUNT</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[DISCOUNT]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>DISCOUNT</remote-alias>
+        <ordinal>7</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>TAX_RATE</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[TAX_RATE]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>TAX_RATE</remote-alias>
+        <ordinal>8</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>SHIP_MODE</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[SHIP_MODE]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>SHIP_MODE</remote-alias>
+        <ordinal>9</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>25</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='0' name='binary' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>FILL_TIME</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[FILL_TIME]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>FILL_TIME</remote-alias>
+        <ordinal>10</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>GROSS_PROFIT</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[GROSS_PROFIT]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>GROSS_PROFIT</remote-alias>
+        <ordinal>11</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>PRICE</remote-name>
+        <remote-type>131</remote-type>
+        <local-name>[PRICE]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>PRICE</remote-alias>
+        <ordinal>12</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>18</precision>
+        <scale>4</scale>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>SHIP_HANDLE_COST</remote-name>
+        <remote-type>131</remote-type>
+        <local-name>[SHIP_HANDLE_COST]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>SHIP_HANDLE_COST</remote-alias>
+        <ordinal>13</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>18</precision>
+        <scale>4</scale>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>EMPLOYEE_NAME</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[EMPLOYEE_NAME]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>EMPLOYEE_NAME</remote-alias>
+        <ordinal>14</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>50</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='0' name='binary' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>EMPLOYEE_DEPT</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[EMPLOYEE_DEPT]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>EMPLOYEE_DEPT</remote-alias>
+        <ordinal>15</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>4</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='0' name='binary' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>MANAGER_NAME</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[MANAGER_NAME]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>MANAGER_NAME</remote-alias>
+        <ordinal>16</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>255</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='0' name='binary' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>EMPLOYEE_YRS_EXP</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[EMPLOYEE_YRS_EXP]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>EMPLOYEE_YRS_EXP</remote-alias>
+        <ordinal>17</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>EMPLOYEE_SALARY</remote-name>
+        <remote-type>131</remote-type>
+        <local-name>[EMPLOYEE_SALARY]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>EMPLOYEE_SALARY</remote-alias>
+        <ordinal>18</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>18</precision>
+        <scale>4</scale>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>CUSTOMER_NAME</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[CUSTOMER_NAME]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>CUSTOMER_NAME</remote-alias>
+        <ordinal>19</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>50</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='0' name='binary' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>CUSTOMER_STATE</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[CUSTOMER_STATE]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>CUSTOMER_STATE</remote-alias>
+        <ordinal>20</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>50</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='0' name='binary' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>CALL_CENTER_REGION</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[CALL_CENTER_REGION]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>CALL_CENTER_REGION</remote-alias>
+        <ordinal>21</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>25</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='0' name='binary' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>CUSTOMER_BALANCE</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[CUSTOMER_BALANCE]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>CUSTOMER_BALANCE</remote-alias>
+        <ordinal>22</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>CUSTOMER_SEGMENT</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[CUSTOMER_SEGMENT]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>CUSTOMER_SEGMENT</remote-alias>
+        <ordinal>23</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>25</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='0' name='binary' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>PROD_TYPE1</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[PROD_TYPE1]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>PROD_TYPE1</remote-alias>
+        <ordinal>24</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>50</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='0' name='binary' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>PROD_TYPE2</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[PROD_TYPE2]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>PROD_TYPE2</remote-alias>
+        <ordinal>25</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>50</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='0' name='binary' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>PROD_TYPE3</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[PROD_TYPE3]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>PROD_TYPE3</remote-alias>
+        <ordinal>26</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>50</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='0' name='binary' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>PROD_TYPE4</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[PROD_TYPE4]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>PROD_TYPE4</remote-alias>
+        <ordinal>27</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>50</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='0' name='binary' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>PRODUCT_NAME</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[PRODUCT_NAME]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>PRODUCT_NAME</remote-alias>
+        <ordinal>28</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>100</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='0' name='binary' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>PRODUCT_CONTAINER</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[PRODUCT_CONTAINER]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>PRODUCT_CONTAINER</remote-alias>
+        <ordinal>29</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>25</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='0' name='binary' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>SHIP_PROMO</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[SHIP_PROMO]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>SHIP_PROMO</remote-alias>
+        <ordinal>30</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>25</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='0' name='binary' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>SUPPLIER_NAME</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[SUPPLIER_NAME]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>SUPPLIER_NAME</remote-alias>
+        <ordinal>31</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>25</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='0' name='binary' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>SUPPLIER_BALANCE</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[SUPPLIER_BALANCE]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>SUPPLIER_BALANCE</remote-alias>
+        <ordinal>32</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>SUPPLIER_REGION</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[SUPPLIER_REGION]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>SUPPLIER_REGION</remote-alias>
+        <ordinal>33</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>25</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='0' name='binary' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>SUPPLIER_STATE</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[SUPPLIER_STATE]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>SUPPLIER_STATE</remote-alias>
+        <ordinal>34</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>50</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='0' name='binary' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>ORDER_ID</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[ORDER_ID]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>ORDER_ID</remote-alias>
+        <ordinal>35</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>10</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='0' name='binary' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>ORDER_YEAR</remote-name>
+        <remote-type>3</remote-type>
+        <local-name>[ORDER_YEAR]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>ORDER_YEAR</remote-alias>
+        <ordinal>36</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>10</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_LONG&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>ORDER_MONTH</remote-name>
+        <remote-type>3</remote-type>
+        <local-name>[ORDER_MONTH]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>ORDER_MONTH</remote-alias>
+        <ordinal>37</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>10</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_LONG&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>ORDER_DAY</remote-name>
+        <remote-type>3</remote-type>
+        <local-name>[ORDER_DAY]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>ORDER_DAY</remote-alias>
+        <ordinal>38</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>10</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_LONG&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>ORDER_DATE</remote-name>
+        <remote-type>7</remote-type>
+        <local-name>[ORDER_DATE]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>ORDER_DATE</remote-alias>
+        <ordinal>39</ordinal>
+        <local-type>datetime</local-type>
+        <aggregation>Year</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>ORDER_QUARTER</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[ORDER_QUARTER]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>ORDER_QUARTER</remote-alias>
+        <ordinal>40</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>2</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='0' name='binary' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>PRODUCT_BASE_MARGIN</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[PRODUCT_BASE_MARGIN]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>PRODUCT_BASE_MARGIN</remote-alias>
+        <ordinal>41</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>PRODUCT_ID</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[PRODUCT_ID]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>PRODUCT_ID</remote-alias>
+        <ordinal>42</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>5</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='0' name='binary' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>RECEIVE_TIME</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[RECEIVE_TIME]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>RECEIVE_TIME</remote-alias>
+        <ordinal>43</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>RECEIVED_DATE</remote-name>
+        <remote-type>7</remote-type>
+        <local-name>[RECEIVED_DATE]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>RECEIVED_DATE</remote-alias>
+        <ordinal>44</ordinal>
+        <local-type>datetime</local-type>
+        <aggregation>Year</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>SHIP_DATE</remote-name>
+        <remote-type>7</remote-type>
+        <local-name>[SHIP_DATE]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>SHIP_DATE</remote-alias>
+        <ordinal>45</ordinal>
+        <local-type>datetime</local-type>
+        <aggregation>Year</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>SHIP_CHARGE</remote-name>
+        <remote-type>131</remote-type>
+        <local-name>[SHIP_CHARGE]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>SHIP_CHARGE</remote-alias>
+        <ordinal>46</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>18</precision>
+        <scale>4</scale>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DECIMAL&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_NUMERIC&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>TOTAL_CYCLE_TIME</remote-name>
+        <remote-type>5</remote-type>
+        <local-name>[TOTAL_CYCLE_TIME]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>TOTAL_CYCLE_TIME</remote-alias>
+        <ordinal>47</ordinal>
+        <local-type>real</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>15</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>PRODUCT_IN_STOCK</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[PRODUCT_IN_STOCK]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>PRODUCT_IN_STOCK</remote-alias>
+        <ordinal>48</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>3</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='0' name='binary' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>PID</remote-name>
+        <remote-type>3</remote-type>
+        <local-name>[PID]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>PID</remote-alias>
+        <ordinal>49</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <precision>10</precision>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_LONG&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>MARKET_SEGMENT</remote-name>
+        <remote-type>130</remote-type>
+        <local-name>[MARKET_SEGMENT]</local-name>
+        <parent-name>[STAPLES]</parent-name>
+        <remote-alias>MARKET_SEGMENT</remote-alias>
+        <ordinal>50</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <width>25</width>
+        <contains-null>true</contains-null>
+        <padded-semantics>true</padded-semantics>
+        <collation flag='0' name='binary' />
+        <attributes>
+          <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WCHAR&quot;</attribute>
+          <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+        </attributes>
+      </metadata-record>
+    </metadata-records>
+  </connection>
+  <aliases enabled='yes' />
+  <column caption='Call Center Region' datatype='string' name='[CALL_CENTER_REGION]' role='dimension' type='nominal' />
+  <column caption='Customer Balance' datatype='real' name='[CUSTOMER_BALANCE]' role='measure' type='quantitative' />
+  <column caption='Customer Name' datatype='string' name='[CUSTOMER_NAME]' role='dimension' type='nominal' />
+  <column caption='Customer Segment' datatype='string' name='[CUSTOMER_SEGMENT]' role='dimension' type='nominal' />
+  <column caption='Customer State' datatype='string' name='[CUSTOMER_STATE]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+  <column caption='Discount' datatype='real' name='[DISCOUNT]' role='measure' type='quantitative' />
+  <column caption='Employee Dept' datatype='string' name='[EMPLOYEE_DEPT]' role='dimension' type='nominal' />
+  <column caption='Employee Name' datatype='string' name='[EMPLOYEE_NAME]' role='dimension' type='nominal' />
+  <column caption='Employee Salary' datatype='real' name='[EMPLOYEE_SALARY]' role='measure' type='quantitative' />
+  <column caption='Employee Yrs Exp' datatype='real' name='[EMPLOYEE_YRS_EXP]' role='measure' type='quantitative' />
+  <column caption='Fill Time' datatype='real' name='[FILL_TIME]' role='measure' type='quantitative' />
+  <column caption='Gross Profit' datatype='real' name='[GROSS_PROFIT]' role='measure' type='quantitative' />
+  <column caption='Item Count' datatype='integer' name='[ITEM_COUNT]' role='measure' type='quantitative' />
+  <column caption='Manager Name' datatype='string' name='[MANAGER_NAME]' role='dimension' type='nominal' />
+  <column caption='Market Segment' datatype='string' name='[MARKET_SEGMENT]' role='dimension' type='nominal' />
+  <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+    <calculation class='tableau' formula='1' />
+  </column>
+  <column caption='Order Date' datatype='datetime' name='[ORDER_DATE]' role='dimension' type='ordinal' />
+  <column caption='Order Day' datatype='integer' name='[ORDER_DAY]' role='dimension' type='quantitative' />
+  <column caption='Order Id' datatype='string' name='[ORDER_ID]' role='dimension' type='nominal' />
+  <column caption='Order Month' datatype='integer' name='[ORDER_MONTH]' role='dimension' type='quantitative' />
+  <column caption='Order Priority' datatype='string' name='[ORDER_PRIORITY]' role='dimension' type='nominal' />
+  <column caption='Order Quantity' datatype='real' name='[ORDER_QUANTITY]' role='measure' type='quantitative' />
+  <column caption='Order Quarter' datatype='string' name='[ORDER_QUARTER]' role='dimension' type='nominal' />
+  <column caption='Order Status' datatype='string' name='[ORDER_STATUS]' role='dimension' type='nominal' />
+  <column caption='Order Year' datatype='integer' name='[ORDER_YEAR]' role='dimension' type='quantitative' />
+  <column caption='Price' datatype='real' name='[PRICE]' role='measure' type='quantitative' />
+  <column caption='Product Base Margin' datatype='real' name='[PRODUCT_BASE_MARGIN]' role='measure' type='quantitative' />
+  <column caption='Product Container' datatype='string' name='[PRODUCT_CONTAINER]' role='dimension' type='nominal' />
+  <column caption='Product Id' datatype='string' name='[PRODUCT_ID]' role='dimension' type='nominal' />
+  <column caption='Product In Stock' datatype='string' name='[PRODUCT_IN_STOCK]' role='dimension' type='nominal' />
+  <column caption='Product Name' datatype='string' name='[PRODUCT_NAME]' role='dimension' type='nominal' />
+  <column caption='Prod Type1' datatype='string' name='[PROD_TYPE1]' role='dimension' type='nominal' />
+  <column caption='Prod Type2' datatype='string' name='[PROD_TYPE2]' role='dimension' type='nominal' />
+  <column caption='Prod Type3' datatype='string' name='[PROD_TYPE3]' role='dimension' type='nominal' />
+  <column caption='Prod Type4' datatype='string' name='[PROD_TYPE4]' role='dimension' type='nominal' />
+  <column caption='Received Date' datatype='datetime' name='[RECEIVED_DATE]' role='dimension' type='ordinal' />
+  <column caption='Receive Time' datatype='real' name='[RECEIVE_TIME]' role='measure' type='quantitative' />
+  <column caption='Sales Total' datatype='real' name='[SALES_TOTAL]' role='measure' type='quantitative' />
+  <column caption='Ship Charge' datatype='real' name='[SHIP_CHARGE]' role='measure' type='quantitative' />
+  <column caption='Ship Date' datatype='datetime' name='[SHIP_DATE]' role='dimension' type='ordinal' />
+  <column caption='Ship Handle Cost' datatype='real' name='[SHIP_HANDLE_COST]' role='measure' type='quantitative' />
+  <column caption='Ship Mode' datatype='string' name='[SHIP_MODE]' role='dimension' type='nominal' />
+  <column caption='Ship Priority' datatype='string' name='[SHIP_PRIORITY]' role='dimension' type='nominal' />
+  <column caption='Ship Promo' datatype='string' name='[SHIP_PROMO]' role='dimension' type='nominal' />
+  <column caption='Supplier Balance' datatype='real' name='[SUPPLIER_BALANCE]' role='measure' type='quantitative' />
+  <column caption='Supplier Name' datatype='string' name='[SUPPLIER_NAME]' role='dimension' type='nominal' />
+  <column caption='Supplier Region' datatype='string' name='[SUPPLIER_REGION]' role='dimension' type='nominal' />
+  <column caption='Supplier State' datatype='string' name='[SUPPLIER_STATE]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+  <column caption='Tax Rate' datatype='real' name='[TAX_RATE]' role='measure' type='quantitative' />
+  <column caption='Total Cycle Time' datatype='real' name='[TOTAL_CYCLE_TIME]' role='measure' type='quantitative' />
+  <layout dim-ordering='alphabetic' dim-percentage='0.133758' measure-ordering='alphabetic' measure-percentage='0.866242' show-structure='true' />
+  <semantic-values>
+    <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+  </semantic-values>
+</datasource>
